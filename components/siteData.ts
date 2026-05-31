@@ -22,11 +22,7 @@ export const company = {
   phoneHref: "tel:+14374521109",
   whatsAppHref: "https://wa.me/14374521109",
   address: "95 Oneida Crescent, Richmond Hill, ON L4B 0H5, Canada",
-  addressLines: [
-    "95 Oneida Crescent",
-    "Richmond Hill, ON L4B 0H5",
-    "Canada"
-  ],
+  addressLines: ["95 Oneida Crescent", "Richmond Hill, ON L4B 0H5", "Canada"],
   mapEmbedSrc:
     "https://www.google.com/maps?q=95%20Oneida%20Crescent%2C%20Richmond%20Hill%2C%20ON%20L4B%200H5%2C%20Canada&output=embed",
   mapLink:
@@ -80,17 +76,17 @@ export const productHighlights = [
   },
   {
     title: "Premium Saffron",
-    subtitle: "Zafferan",
+    subtitle: "Saffron",
     description:
-      "A high-demand Persian pantry category suitable for commercial product catalog discussions.",
+      "A high-demand pantry category suitable for commercial product catalog discussions.",
     image: "/images/product-saffron.svg"
   },
   {
-    title: "Traditional Flatbread",
-    subtitle: "Nan",
+    title: "Traditional Bakery Products",
+    subtitle: "Bakery",
     description:
       "Traditional bakery categories for retailers, restaurants, bakeries, and foodservice buyers.",
-    image: "/images/product-bread.svg"
+    image: "/images/product-bakery.svg"
   }
 ];
 
@@ -104,7 +100,7 @@ export const features = [
   {
     title: "Premium Product Sourcing",
     description:
-      "A focused approach to high-quality Iranian food, bakery, and grocery categories.",
+      "A focused approach to high-quality food, bakery, and grocery categories.",
     icon: BadgeCheck
   },
   {
@@ -135,7 +131,7 @@ export const distributionItems = [
   {
     title: "Sourcing Coordination",
     description:
-      "Supporting commercial conversations around Iranian food, bakery, and grocery product categories.",
+      "Supporting commercial conversations around food, bakery, and grocery product categories.",
     icon: Building2
   },
   {
