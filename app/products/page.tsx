@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { ProductCategoryCard } from "@/components/ProductCategoryCard";
+import { ProductHighlights } from "@/components/ProductHighlights";
 import { SectionTitle } from "@/components/SectionTitle";
 import { productCategories } from "@/components/siteData";
 
 export const metadata: Metadata = {
   title: "Product Categories",
   description:
-    "Explore Iranian food, traditional bakery, grocery, pantry, and wholesale supply categories available for commercial request."
+    "Explore food, bakery, grocery, pantry, and wholesale supply categories available for commercial request."
 };
 
 export default function ProductsPage() {
@@ -17,7 +18,7 @@ export default function ProductsPage() {
       <PageHero
         eyebrow="Product categories"
         title="Category-based supply for commercial buyers"
-        description="ANGABIN CANADA INC. presents Iranian food, bakery, and grocery categories for professional wholesale and partnership discussions."
+        description="ANGABIN CANADA INC. presents food, bakery, and grocery categories for professional wholesale and partnership discussions."
       />
       <section className="py-20">
         <div className="container-shell">
@@ -35,6 +36,7 @@ export default function ProductsPage() {
           </p>
         </div>
       </section>
+      <ProductHighlights />
       <CTASection />
     </main>
   );
