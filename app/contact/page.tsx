@@ -102,6 +102,34 @@ export default function ContactPage() {
           <ContactForm />
         </div>
       </section>
+      <section className="bg-mist py-20">
+        <div className="container-shell">
+          <div className="mb-8 max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-wide text-forest-700">Location</p>
+            <h2 className="mt-3 font-display text-3xl font-semibold text-charcoal md:text-4xl">
+              Visit our Richmond Hill contact location
+            </h2>
+            <p className="mt-4 text-base leading-8 text-charcoal/70">{company.address}</p>
+          </div>
+          <div className="overflow-hidden rounded-md border border-forest-100 bg-white shadow-soft">
+            <iframe
+              title="ANGABIN CANADA INC. Google Map"
+              src={company.mapEmbedSrc}
+              className="h-[380px] w-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          <a
+            href={company.mapLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus-ring mt-5 inline-flex rounded-md bg-forest-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-forest-800"
+          >
+            Open in Google Maps
+          </a>
+        </div>
+      </section>
     </main>
   );
 }
