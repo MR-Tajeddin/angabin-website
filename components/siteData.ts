@@ -16,17 +16,21 @@ export const company = {
   establishedYear: "2022",
   domain: "jamangabin.com",
   displayDomain: "www.jamangabin.com",
-  email: "info@jamangabin.com",
-  emailHref: "mailto:info@jamangabin.com",
+  email: "Majid.jahanbakhshi@yahoo.cam",
+  emailHref: "mailto:Majid.jahanbakhshi@yahoo.cam",
   phone: "+1 437-452-1109",
   phoneHref: "tel:+14374521109",
   whatsAppHref: "https://wa.me/14374521109",
-  address: "2967 Dundas Street W, Unit 1140, Toronto, ON M6P 1Z2, Canada",
+  address: "95 Oneida Crescent, Richmond Hill, ON L4B 0H5, Canada",
   addressLines: [
-    "2967 Dundas Street W, Unit 1140",
-    "Toronto, ON M6P 1Z2",
+    "95 Oneida Crescent",
+    "Richmond Hill, ON L4B 0H5",
     "Canada"
   ],
+  mapEmbedSrc:
+    "https://www.google.com/maps?q=95%20Oneida%20Crescent%2C%20Richmond%20Hill%2C%20ON%20L4B%200H5%2C%20Canada&output=embed",
+  mapLink:
+    "https://www.google.com/maps/search/?api=1&query=95%20Oneida%20Crescent%2C%20Richmond%20Hill%2C%20ON%20L4B%200H5%2C%20Canada",
   linkedIn: "https://www.linkedin.com/in/majiid-jahanbakhshi-49489a330"
 };
 
@@ -63,6 +67,30 @@ export const productCategories = [
     description:
       "Category-based supply solutions for wholesale buyers and long-term commercial partners.",
     icon: PackageCheck
+  }
+];
+
+export const productHighlights = [
+  {
+    title: "Persian Rock Candy",
+    subtitle: "Nabat",
+    description:
+      "A recognizable Iranian sweetener category for tea, grocery shelves, and specialty retail programs.",
+    image: "/images/product-nabat.svg"
+  },
+  {
+    title: "Premium Saffron",
+    subtitle: "Zafferan",
+    description:
+      "A high-demand Persian pantry category suitable for commercial product catalog discussions.",
+    image: "/images/product-saffron.svg"
+  },
+  {
+    title: "Traditional Flatbread",
+    subtitle: "Nan",
+    description:
+      "Traditional bakery categories for retailers, restaurants, bakeries, and foodservice buyers.",
+    image: "/images/product-bread.svg"
   }
 ];
 
