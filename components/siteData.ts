@@ -11,6 +11,10 @@ import {
   Wheat
 } from "lucide-react";
 
+const whatsAppMessage = encodeURIComponent(
+  "Hello, I need more information about ANGABIN CANADA INC. products and partnership opportunities."
+);
+
 export const company = {
   name: "ANGABIN CANADA INC.",
   establishedYear: "2022",
@@ -20,7 +24,7 @@ export const company = {
   emailHref: "mailto:Majid.jahanbakhshi@yahoo.cam",
   phone: "+1 437-452-1109",
   phoneHref: "tel:+14374521109",
-  whatsAppHref: "https://wa.me/14374521109",
+  whatsAppHref: `https://wa.me/14374521109?text=${whatsAppMessage}`,
   address: "95 Oneida Crescent, Richmond Hill, ON L4B 0H5, Canada",
   addressLines: ["95 Oneida Crescent", "Richmond Hill, ON L4B 0H5", "Canada"],
   mapEmbedSrc:
