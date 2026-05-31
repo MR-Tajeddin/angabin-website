@@ -1,5 +1,3 @@
-@config "../tailwind.config.ts";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -30,29 +28,8 @@ body {
 }
 
 .persian-pattern {
-  background-image:
-    radial-gradient(circle at 1px 1px, rgba(35, 99, 57, 0.12) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, rgba(35, 99, 57, 0.12) 1px, transparent 0);
   background-size: 22px 22px;
-}
-
-.container-shell {
-  width: min(1120px, calc(100% - 32px));
-  margin: 0 auto;
-}
-
-.focus-ring {
-  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-forest-600;
-}
-
-@layer base {
-  a {
-    text-decoration: none;
-  }
-
-  img,
-  svg {
-    display: block;
-  }
 }
 
 @layer components {
