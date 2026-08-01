@@ -4,27 +4,29 @@ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
+const siteUrl = "https://www.angabincanada.com";
+
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "ANGABIN CANADA INC.",
-  url: "https://www.jamangabin.com",
-  logo: "https://www.jamangabin.com/brand/angabin-logo.png",
-  email: "info@jamangabin.com",
+  url: siteUrl,
+  logo: `${siteUrl}/brand/angabin-logo.png`,
+  email: "info@angabincanada.com",
   telephone: "+1 437-452-1109",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "2967 Dundas Street W, Unit 1140",
-    addressLocality: "Toronto",
+    streetAddress: "95 Oneida Crescent",
+    addressLocality: "Richmond Hill",
     addressRegion: "ON",
-    postalCode: "M6P 1Z2",
+    postalCode: "L4B 0H5",
     addressCountry: "CA"
   },
   foundingDate: "2022"
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.jamangabin.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "ANGABIN CANADA INC. | Iranian Food Distribution & Supply",
     template: "%s | ANGABIN CANADA INC."
@@ -41,11 +43,14 @@ export const metadata: Metadata = {
     "Iranian grocery supplier Toronto",
     "Persian food wholesale Canada"
   ],
+  alternates: {
+    canonical: siteUrl
+  },
   openGraph: {
     title: "ANGABIN CANADA INC.",
     description:
       "B2B distribution and supply chain support for premium Iranian food products across North America.",
-    url: "https://www.jamangabin.com",
+    url: siteUrl,
     siteName: "ANGABIN CANADA INC.",
     images: ["/brand/angabin-logo.png", "/images/iranian-food-distribution-hero.png"],
     locale: "en_CA",
