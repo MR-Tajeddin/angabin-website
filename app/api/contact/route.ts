@@ -71,13 +71,14 @@ export async function POST(request: Request) {
   }
 
   const smtpHost = process.env.SMTP_HOST;
-  const smtpPort = Number(process.env.SMTP_PORT);
+  const smtpPort = Number(process.env.SMTP_PORT || 587);
   const smtpUser = process.env.SMTP_USER;
   const smtpPass = process.env.SMTP_PASS;
-  const toEmail = process.env.CONTACT_TO_EMAIL;
-  const publicEmail = process.env.CONTACT_PUBLIC_EMAIL || "info@jamangabin.com";
+  const toEmail = process.env.CONTACT_TO_EMAIL || "info@angabincanada.com";
+  const publicEmail =
+    process.env.CONTACT_PUBLIC_EMAIL || "info@angabincanada.com";
 
-  if (!smtpHost || !smtpPort || !smtpUser || !smtpPass || !toEmail) {
+  if (!smtpHost || !smtpUser || !smtpPass) {
     return NextResponse.json(
       { error: "Email service is not configured." },
       { status: 500 }
@@ -106,7 +107,10 @@ Message:
 ${data.message}
 
 Source:
-ANGABIN CANADA INC. Website`;
+ANGABIN CANADA INC. Website
+
+Public Contact Email:
+${publicEmail}`;
 
   const html = `
     <p>New website inquiry received.</p>
@@ -117,6 +121,7 @@ ANGABIN CANADA INC. Website`;
     <p><strong>Inquiry Type:</strong><br>${escapeHtml(data.inquiryType)}</p>
     <p><strong>Message:</strong><br>${escapeHtml(data.message).replaceAll("\n", "<br>")}</p>
     <p><strong>Source:</strong><br>ANGABIN CANADA INC. Website</p>
+    <p><strong>Public Contact Email:</strong><br>${escapeHtml(publicEmail)}</p>
   `;
 
   try {
@@ -133,7 +138,8 @@ ANGABIN CANADA INC. Website`;
     });
 
     return NextResponse.json({ success: true });
-  } catch {
+  } catch (error) {
+    console.error("Contact form email error:", error);
     return NextResponse.json(
       { error: "Unable to send message." },
       { status: 500 }
